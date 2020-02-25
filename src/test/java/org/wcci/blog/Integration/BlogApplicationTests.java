@@ -6,10 +6,10 @@ import org.springframework.test.annotation.DirtiesContext;
 
 @DirtiesContext
 @SpringBootTest
-public class BlogApplicationTests {
+class BlogApplicationTests {
 
     @Test
-    public void contextLoads() {
+    void contextLoads() {
 
     }
 

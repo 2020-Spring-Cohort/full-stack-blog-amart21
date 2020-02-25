@@ -12,6 +12,12 @@ import org.wcci.blog.CategoryStorage;
 import org.wcci.blog.HashtagStorage;
 import org.wcci.blog.PostStorage;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest
@@ -28,6 +34,12 @@ public class WebLayerTest {
 
     @Test
     public void postShouldBeOkAndReturnThePostViewwiththeViewModelAttribute() throws Exception{
+
+        mockMvc.perform(get("/categories"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(view().name("categories-view"))
+                .andExpect(model().attributeExists("categories"));
 
     }
 

@@ -10,4 +10,6 @@ public interface CategoryStorage {
 
     public void store(Category category);
 
+    Category findCategoryByType(String categoryType);
+
 }

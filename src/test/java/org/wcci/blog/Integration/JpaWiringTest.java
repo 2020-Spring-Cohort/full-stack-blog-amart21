@@ -26,7 +26,7 @@ public class JpaWiringTest {
     private TestEntityManager entityManager;
 
     @Test
-    public void catgegoryShouldHaveAListOfPost(){
+    public void catgegoryShouldHaveAListOfPosts(){
         Category testCategory = new Category("Pizza");
         Post testPost = new Post(testCategory,"pizza","best pie in town");
         categoryRepo.save(testCategory);
