@@ -1,4 +1,4 @@
-package org.wcci.blog.models;
+package org.wcci.blog;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -24,7 +24,6 @@ public class Hashtag {
     }
 
     public Hashtag(){
-
     }
 
     public Hashtag(String hashtag) {
@@ -36,12 +35,15 @@ public class Hashtag {
         if (this == o) return true;
         if (!(o instanceof Hashtag)) return false;
         Hashtag hashtag1 = (Hashtag) o;
-        return Objects.equals(hashtag, hashtag1.hashtag) &&
-                Objects.equals(id, hashtag1.id);
+        return Objects.equals(getHashtag(), hashtag1.getHashtag()) &&
+                Objects.equals(getId(), hashtag1.getId());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(hashtag, id);
+        return Objects.hash(getHashtag(), getId());
     }
 }
+
+
+

@@ -1,4 +1,4 @@
-package org.wcci.blog.models;
+package org.wcci.blog;
 
 import javax.persistence.*;
 import java.util.Arrays;
@@ -8,6 +8,7 @@ import java.util.Objects;
 @Entity
 
 public class Post {
+    @Lob
     private String postBody;
     private String  title;
 
@@ -17,7 +18,7 @@ public class Post {
     @GeneratedValue
     private Long id;
     @ManyToMany
-    private Collection<Hashtag> hashtags;
+    private Collection<org.wcci.blog.models.Hashtag> hashtags;
 
     public Post(Category category, String title, String postBody, Hashtag...hashtag){
         this.category = category;

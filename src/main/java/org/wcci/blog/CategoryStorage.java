@@ -1,8 +1,6 @@
 package org.wcci.blog;
 
 
-import org.wcci.blog.models.Category;
-
 import java.util.Collection;
 
 

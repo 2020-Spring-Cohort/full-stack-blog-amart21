@@ -1,15 +1,13 @@
 package org.wcci.blog.Storage;
 
 
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.wcci.blog.PostRepository;
 import org.wcci.blog.PostStorage;
 import org.wcci.blog.PostStorageJpaImp;
-import org.wcci.blog.models.Category;
-import org.wcci.blog.models.Hashtag;
-import org.wcci.blog.models.Post;
+import org.wcci.blog.Category;
+import org.wcci.blog.Post;
 
 import java.util.Optional;
 

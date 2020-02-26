@@ -2,7 +2,6 @@ package org.wcci.blog;
 
 
 import org.springframework.stereotype.Service;
-import org.wcci.blog.models.Category;
 
 import java.util.Collection;
 

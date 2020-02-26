@@ -8,9 +8,8 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
 import org.wcci.blog.controllers.PostController;
 import org.wcci.blog.PostStorage;
-import org.wcci.blog.models.Category;
-import org.wcci.blog.models.Hashtag;
-import org.wcci.blog.models.Post;
+import org.wcci.blog.Category;
+import org.wcci.blog.Post;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
