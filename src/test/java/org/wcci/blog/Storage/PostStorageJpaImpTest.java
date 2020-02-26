@@ -3,11 +3,7 @@ package org.wcci.blog.Storage;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.wcci.blog.PostRepository;
-import org.wcci.blog.PostStorage;
-import org.wcci.blog.PostStorageJpaImp;
-import org.wcci.blog.Category;
-import org.wcci.blog.Post;
+import org.wcci.blog.*;
 
 import java.util.Optional;
 
