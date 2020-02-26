@@ -1,6 +1,7 @@
-package org.wcci.blog;
+package org.wcci.blog.models;
 
 import javax.persistence.*;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -18,10 +19,11 @@ public class Post {
     @ManyToMany
     private Collection<Hashtag> hashtags;
 
-    public Post(Category category, String title, String postBody){
+    public Post(Category category, String title, String postBody, Hashtag...hashtag){
         this.category = category;
         this.title = title;
         this.postBody = postBody;
+        this.hashtags = Arrays.asList(hashtag);
 
     }
     public Post(){

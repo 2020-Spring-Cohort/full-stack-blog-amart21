@@ -2,9 +2,9 @@ package org.wcci.blog;
 
 
 import org.springframework.stereotype.Service;
+import org.wcci.blog.models.Category;
 
 import java.util.Collection;
-import java.util.Collections;
 
 @Service
 public class CategoryStorageJpaImp implements CategoryStorage {
@@ -22,10 +22,10 @@ public class CategoryStorageJpaImp implements CategoryStorage {
     public void store(Category category){
         categoryRepository.save(category);
     }
-//    @Override
-//    public Category findCategoryByType(String categoryType){
-//        return categoryRepository.findByType(categoryType).get();
-//    }
+    @Override
+    public Category findCategoryByType(String categoryType){
+        return categoryRepository.findByType(categoryType).get();
+    }
 
 
 }

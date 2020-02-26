@@ -1,10 +1,10 @@
 package org.wcci.blog;
 
 
-import javafx.geometry.Pos;
+import org.wcci.blog.models.Post;
 
 public interface PostStorage {
-    Post FindPostById(long id);
+    Post findPostById(long id);
 
     void store(Post postToStore);
 }

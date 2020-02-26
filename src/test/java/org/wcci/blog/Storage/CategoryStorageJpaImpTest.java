@@ -1,7 +1,7 @@
 package org.wcci.blog.Storage;
 
 import org.junit.jupiter.api.Test;
-import org.wcci.blog.Category;
+import org.wcci.blog.models.Category;
 import org.wcci.blog.CategoryRepository;
 import org.wcci.blog.CategoryStorage;
 import org.wcci.blog.CategoryStorageJpaImp;
@@ -10,7 +10,6 @@ import java.util.Collections;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.InstanceOfAssertFactories.OPTIONAL;
 import static org.mockito.Mockito.*;
 
 public class CategoryStorageJpaImpTest {
@@ -44,4 +43,4 @@ public class CategoryStorageJpaImpTest {
         assertThat(retrievedCategory2).isEqualTo(testcategory2);
         }
     }
-}
+

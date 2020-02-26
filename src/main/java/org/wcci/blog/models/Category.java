@@ -1,4 +1,4 @@
-package org.wcci.blog;
+package org.wcci.blog.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,12 +32,12 @@ public class Category {
         if (!(o instanceof Category)) return false;
         Category category = (Category) o;
         return getId().equals(category.getId()) &&
-                getType().equals(category.getType());
+                Objects.equals(getType(),category.getType());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, getType());
+        return Objects.hash(getId(), getType());
     }
     public Long getId(){
         return id;
