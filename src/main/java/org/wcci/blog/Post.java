@@ -18,7 +18,7 @@ public class Post {
     @GeneratedValue
     private Long id;
     @ManyToMany
-    private Collection<org.wcci.blog.models.Hashtag> hashtags;
+    private Collection<org.wcci.blog.Hashtag> hashtags;
 
     public Post(Category category, String title, String postBody, Hashtag...hashtag){
         this.category = category;
@@ -41,7 +41,6 @@ public class Post {
                 Objects.equals(category, post.category) &&
                 getId().equals(post.getId());
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(postBody, title, category, getId());

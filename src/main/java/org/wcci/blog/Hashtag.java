@@ -22,26 +22,23 @@ public class Hashtag {
     public String getHashtag() {
         return hashtag;
     }
-
     public Hashtag(){
     }
-
     public Hashtag(String hashtag) {
         this.hashtag = hashtag;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Hashtag)) return false;
         Hashtag hashtag1 = (Hashtag) o;
-        return Objects.equals(getHashtag(), hashtag1.getHashtag()) &&
-                Objects.equals(getId(), hashtag1.getId());
+        return Objects.equals(hashtag, hashtag1.hashtag) &&
+                Objects.equals(id, hashtag1.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getHashtag(), getId());
+        return Objects.hash(hashtag,id);
     }
 }
 

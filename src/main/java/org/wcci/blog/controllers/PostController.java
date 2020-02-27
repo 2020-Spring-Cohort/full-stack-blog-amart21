@@ -3,6 +3,7 @@ package org.wcci.blog.controllers;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.wcci.blog.Post;
 import org.wcci.blog.PostStorage;
 
 public class PostController {

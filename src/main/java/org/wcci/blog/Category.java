@@ -20,12 +20,10 @@ public class Category {
         this.type = type;
     }
     public Category(){
-
     }
     public String getType(){
         return type;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
