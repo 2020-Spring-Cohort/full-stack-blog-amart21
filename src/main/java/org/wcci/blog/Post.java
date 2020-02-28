@@ -1,9 +1,9 @@
 package org.wcci.blog;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.*;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Objects;
+import java.util.*;
 
 @Entity
 
@@ -11,25 +11,36 @@ public class Post {
     @Lob
     private String postBody;
     private String  title;
-
     @ManyToOne
     private Category category;
     @Id
     @GeneratedValue
     private Long id;
     @ManyToMany
-    private Collection<org.wcci.blog.Hashtag> hashtags;
+    private Collection<Hashtag> hashtags;
 
     public Post(Category category, String title, String postBody, Hashtag...hashtag){
         this.category = category;
         this.title = title;
         this.postBody = postBody;
         this.hashtags = Arrays.asList(hashtag);
-
     }
     public Post(){
 
     }
+    public Collection<Hashtag>getHashtags(){
+        return hashtags;
+    }
+    public void addHashtag(Hashtag hashtagToAdd) {
+        hashtags.add(hashtagToAdd);
+    }
+//    public Collection<Comment> getComments(){
+//        return comments;
+//    }
+//
+//    public void addCommentToReview(Comment commentToAdd){
+//        comments.add(commentToAdd);
+//    }
 
     @Override
     public boolean equals(Object o) {

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/layout.css">
     <script src="https://kit.fontawesome.com/94e0f58538.js" crossorigin="anonymous"></script>
 
-    <title>CategoryView</title>
+    <title>Search Tags</title>
 </head>
 
 <body class="container">
@@ -29,13 +29,15 @@
         </ul>
     </nav>
 </header>
+
+
 <main class="container__main">
-    <h2 th:text="${category.type}"></h2>
-    <ul >
-        <li th:each="review:${category.posts}"> <a th:text="${post.title}" th:href="@{'/post/' + ${post.id}}"> </a>  </li>
-
-
-    </ul>
+    <div th:each="post:${hashtag.posts}">
+        <a th:text="${post.title}" th:href="@{'/post/'+ ${post.id} }"> </a>
+    </div>
 </main>
+
+
 </body>
+
 </html>

@@ -7,7 +7,7 @@ public interface HashtagStorage {
 
     void store(Hashtag hashtagToStore);
 
-    Hashtag FindHashtagById(Long id);
+    Hashtag findHashtagById(Long id);
 
     Collection<Hashtag> findAllHashtags();
 

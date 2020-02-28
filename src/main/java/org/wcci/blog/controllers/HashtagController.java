@@ -7,12 +7,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.Hashtag;
 import org.wcci.blog.HashtagStorage;
+
 @Controller
 public class HashtagController {
     private HashtagStorage hashtagStorage;
 
-    public HashtagController(HashtagStorage hashtagStorage){
+    public HashtagController(HashtagStorage hashtagStorage) {
         this.hashtagStorage = hashtagStorage;
+    }
 
 @RequestMapping("/hashtags")
     public String displayHashtag(Model model){
@@ -29,4 +31,4 @@ public class HashtagController {
 
     }
 
-}
+

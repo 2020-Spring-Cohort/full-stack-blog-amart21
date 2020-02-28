@@ -6,6 +6,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
+import org.wcci.blog.Hashtag;
 import org.wcci.blog.controllers.PostController;
 import org.wcci.blog.PostStorage;
 import org.wcci.blog.Category;
