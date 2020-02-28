@@ -1,11 +1,12 @@
 package org.wcci.blog;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import java.util.Collection;
 import java.util.Objects;
-
+@Entity
 public class Hashtag {
     private String hashtag;
 

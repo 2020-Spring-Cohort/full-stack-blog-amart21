@@ -6,11 +6,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
-import org.wcci.blog.Hashtag;
+import org.wcci.blog.*;
 import org.wcci.blog.controllers.PostController;
-import org.wcci.blog.PostStorage;
-import org.wcci.blog.Category;
-import org.wcci.blog.Post;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -26,7 +23,8 @@ public class PostControllerTest {
     @BeforeEach
     void setUp(){
         mockStorage = mock(PostStorage.class);
-        underTest = new PostController(mockStorage);
+        HashtagRepository hashtagRepo=mock(HashtagRepository.class);
+        underTest = new PostController(mockStorage, hashtagRepo);
         model = mock(Model.class);
         Category testCategory = new Category("Pizza");
         Hashtag testHashtag = new Hashtag("");
