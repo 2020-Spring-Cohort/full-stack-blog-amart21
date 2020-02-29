@@ -1,6 +1,7 @@
-package org.wcci.blog;
+package storage.repositories;
 
 import org.springframework.data.repository.CrudRepository;
+import org.wcci.blog.models.Hashtag;
 
 public interface HashtagRepository extends CrudRepository<Hashtag, Long> {
 }

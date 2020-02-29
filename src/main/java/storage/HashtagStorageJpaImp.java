@@ -1,9 +1,10 @@
-package org.wcci.blog;
+package storage;
 
 
 import org.springframework.stereotype.Service;
-import org.wcci.blog.Hashtag;
-import org.wcci.blog.HashtagRepository;
+import storage.repositories.HashtagRepository;
+import org.wcci.blog.models.Hashtag;
+
 import java.util.Collection;
 
 @Service

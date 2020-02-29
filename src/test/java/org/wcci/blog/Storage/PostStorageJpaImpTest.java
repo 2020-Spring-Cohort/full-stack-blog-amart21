@@ -1,9 +1,14 @@
 package org.wcci.blog.Storage;
 
 
+import org.wcci.blog.models.Category;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.wcci.blog.*;
+import org.wcci.blog.models.Hashtag;
+import org.wcci.blog.models.Post;
+import storage.PostStorage;
+import storage.PostStorageJpaImp;
+import storage.repositories.PostRepository;
 
 import java.util.Optional;
 

@@ -29,13 +29,21 @@
         </ul>
     </nav>
 </header>
-<main class="container__main">
+</body><main class="container__main">
     <h2 th:text="${category.type}"></h2>
     <ul >
-        <li th:each="post:${category.posts}"> <a th:text="${post.title}" th:href="@{'/post/' + ${post.id}}"> </a>  </li>
+        <li th:each="review:${category.posts}">
+            <a th:text="${post.title}" th:href="@{'/post/' + ${post.id}}"> </a>  </li>
 
 
     </ul>
+
+    <form th:action="@{${categoryType} +'/add-post'}" method="POST">
+        <input name="category" type="text">
+        <input name="postTitle" type="text">
+        <input name="postBody" type="text">
+        <button type="submit"> Add Comment</button>
+    </form>
+
 </main>
-</body>
 </html>

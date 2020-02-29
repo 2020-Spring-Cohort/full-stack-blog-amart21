@@ -1,7 +1,7 @@
-package org.wcci.blog;
+package storage;
 
 
-import org.wcci.blog.Post;
+import org.wcci.blog.models.Post;
 
 public interface PostStorage {
     Post findPostById(long id);

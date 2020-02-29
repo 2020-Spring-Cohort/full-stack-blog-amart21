@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.annotation.DirtiesContext;
-import org.wcci.blog.Category;
-import org.wcci.blog.CategoryRepository;
-import org.wcci.blog.Post;
-import org.wcci.blog.PostRepository;
+import org.wcci.blog.models.Category;
+import storage.repositories.CategoryRepository;
+import org.wcci.blog.models.Post;
+import storage.repositories.PostRepository;
 
 import java.util.Optional;
 

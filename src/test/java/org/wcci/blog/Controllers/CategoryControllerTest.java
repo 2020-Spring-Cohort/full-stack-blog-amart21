@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
-import org.wcci.blog.Category;
+import org.wcci.blog.models.Category;
 import org.wcci.blog.controllers.CategoryController;
-import org.wcci.blog.CategoryStorage;
+import storage.CategoryStorage;
 
 import java.util.Collections;
 import java.util.List;

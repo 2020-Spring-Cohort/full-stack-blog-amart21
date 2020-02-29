@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.wcci.blog.Category;
-import org.wcci.blog.CategoryStorage;
+import org.wcci.blog.models.Category;
+import storage.CategoryStorage;
 
 
 @Controller

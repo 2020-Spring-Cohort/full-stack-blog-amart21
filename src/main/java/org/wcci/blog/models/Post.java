@@ -1,4 +1,4 @@
-package org.wcci.blog;
+package org.wcci.blog.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +18,8 @@ public class Post {
     private Long id;
     @ManyToMany
     private Collection<Hashtag> hashtags;
-
+    @OneToMany
+    Collection<Comment> comments;
     public Post(Category category, String title, String postBody, Hashtag...hashtag){
         this.category = category;
         this.title = title;
@@ -34,13 +35,13 @@ public class Post {
     public void addHashtag(Hashtag hashtagToAdd) {
         hashtags.add(hashtagToAdd);
     }
-//    public Collection<Comment> getComments(){
-//        return comments;
-//    }
-//
-//    public void addCommentToReview(Comment commentToAdd){
-//        comments.add(commentToAdd);
-//    }
+    public Collection<Comment> getComments(){
+        return comments;
+    }
+
+    public void addCommentToReview(Comment commentToAdd){
+        comments.add(commentToAdd);
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -1,11 +1,15 @@
 package org.wcci.blog.controllers;
 
+import org.wcci.blog.models.Category;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.wcci.blog.*;
+import org.wcci.blog.models.Hashtag;
+import org.wcci.blog.models.Post;
+import storage.PostStorage;
+import storage.repositories.HashtagRepository;
 
 public class PostController {
 
