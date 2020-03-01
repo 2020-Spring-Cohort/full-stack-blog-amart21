@@ -6,6 +6,7 @@ import java.util.Collection;
 
 public interface CommentStorage {
 
+
     void store(Comment commentToStore);
 
     Comment findCommentById(Long id);
@@ -13,3 +14,4 @@ public interface CommentStorage {
     Collection<Comment> findAllComments();
 
 }
+
