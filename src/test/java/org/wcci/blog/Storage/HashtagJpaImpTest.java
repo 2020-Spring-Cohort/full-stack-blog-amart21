@@ -2,10 +2,10 @@ package org.wcci.blog.Storage;
 
 
 import org.junit.jupiter.api.Test;
+import org.wcci.blog.storage.HashtagStorageJpaImp;
 import org.wcci.blog.models.Hashtag;
-import storage.repositories.HashtagRepository;
-import storage.HashtagStorage;
-import storage.HashtagStorageJpaImp;
+import org.wcci.blog.storage.HashtagStorage;
+import org.wcci.blog.storage.repositories.HashtagRepository;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;

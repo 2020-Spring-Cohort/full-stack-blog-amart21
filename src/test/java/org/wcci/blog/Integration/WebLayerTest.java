@@ -8,9 +8,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import storage.CategoryStorage;
-import storage.HashtagStorage;
-import storage.PostStorage;
+import org.wcci.blog.storage.CategoryStorage;
+import org.wcci.blog.storage.HashtagStorage;
+import org.wcci.blog.storage.PostStorage;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;

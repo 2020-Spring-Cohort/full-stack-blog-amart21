@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.models.Category;
-import storage.CategoryStorage;
+import org.wcci.blog.storage.CategoryStorage;
 
 
 @Controller

@@ -32,7 +32,7 @@
 </body><main class="container__main">
     <h2 th:text="${category.type}"></h2>
     <ul >
-        <li th:each="review:${category.posts}">
+        <li th:each="post:${category.posts}">
             <a th:text="${post.title}" th:href="@{'/post/' + ${post.id}}"> </a>  </li>
 
 

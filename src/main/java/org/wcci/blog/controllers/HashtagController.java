@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.models.Hashtag;
-import storage.HashtagStorage;
+import org.wcci.blog.storage.HashtagStorage;
 
 @Controller
 public class HashtagController {

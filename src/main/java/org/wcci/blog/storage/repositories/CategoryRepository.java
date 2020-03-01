@@ -1,4 +1,4 @@
-package storage.repositories;
+package org.wcci.blog.storage.repositories;
 
 import org.wcci.blog.models.Category;
 import org.springframework.data.repository.CrudRepository;

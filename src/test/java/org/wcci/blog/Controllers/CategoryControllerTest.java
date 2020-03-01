@@ -8,7 +8,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.ui.Model;
 import org.wcci.blog.models.Category;
 import org.wcci.blog.controllers.CategoryController;
-import storage.CategoryStorage;
+import org.wcci.blog.storage.CategoryStorage;
 
 import java.util.Collections;
 import java.util.List;

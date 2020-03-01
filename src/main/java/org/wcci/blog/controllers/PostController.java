@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.wcci.blog.models.Hashtag;
 import org.wcci.blog.models.Post;
-import storage.PostStorage;
-import storage.repositories.HashtagRepository;
+import org.wcci.blog.storage.PostStorage;
+import org.wcci.blog.storage.repositories.HashtagRepository;
 
 public class PostController {
 

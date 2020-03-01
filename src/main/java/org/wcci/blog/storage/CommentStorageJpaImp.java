@@ -1,14 +1,13 @@
-package storage;
+package org.wcci.blog.storage;
 
 import org.springframework.stereotype.Service;
 import org.wcci.blog.models.Comment;
-import storage.repositories.CommentRepository;
+import org.wcci.blog.storage.repositories.CommentRepository;
 
 import java.util.Collection;
 
-public class CommentStorageJpaImp {
     @Service
-    public class CommentStorageJpaImp {
+    public class CommentStorageJpaImp implements CommentStorage {
         private CommentRepository commentRepository;
 
 
@@ -28,6 +27,5 @@ public class CommentStorageJpaImp {
         @Override
         public Collection<Comment> findAllComments(){
             return (Collection<Comment>) commentRepository.findAll();
-        }
     }
 }

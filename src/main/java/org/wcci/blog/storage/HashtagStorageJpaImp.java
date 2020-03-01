@@ -1,9 +1,8 @@
-package storage;
-
+package org.wcci.blog.storage;
 
 import org.springframework.stereotype.Service;
-import storage.repositories.HashtagRepository;
 import org.wcci.blog.models.Hashtag;
+import org.wcci.blog.storage.repositories.HashtagRepository;
 
 import java.util.Collection;
 
@@ -31,5 +30,4 @@ public class HashtagStorageJpaImp implements HashtagStorage {
 
     }
 
-    }
-
+}

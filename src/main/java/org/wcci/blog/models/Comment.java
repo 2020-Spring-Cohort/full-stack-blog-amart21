@@ -23,8 +23,6 @@ public class Comment {
         this.post = post;
     }
     @Override
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Comment)) return false;
@@ -33,7 +31,6 @@ public class Comment {
                 Objects.equals(comment, comment1.comment) &&
                 Objects.equals(id, comment1.id);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(post, comment, id);

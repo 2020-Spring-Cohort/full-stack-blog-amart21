@@ -2,9 +2,9 @@ package org.wcci.blog.Storage;
 
 import org.junit.jupiter.api.Test;
 import org.wcci.blog.models.Category;
-import storage.repositories.CategoryRepository;
-import storage.CategoryStorage;
-import storage.CategoryStorageJpaImp;
+import org.wcci.blog.storage.repositories.CategoryRepository;
+import org.wcci.blog.storage.CategoryStorage;
+import org.wcci.blog.storage.CategoryStorageJpaImp;
 
 import java.util.Collections;
 import java.util.Optional;

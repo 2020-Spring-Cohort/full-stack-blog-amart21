@@ -6,12 +6,13 @@ import org.springframework.stereotype.Component;
 import org.wcci.blog.models.Category;
 import org.wcci.blog.models.Hashtag;
 import org.wcci.blog.models.Post;
-import storage.CategoryStorage;
-import storage.HashtagStorage;
-import storage.PostStorage;
+import org.wcci.blog.storage.CategoryStorage;
+import org.wcci.blog.storage.HashtagStorage;
+import org.wcci.blog.storage.PostStorage;
+
 
 @Component
-public class Populator implements CommandLineRunner {
+public class Populator implements CommandLineRunner{
     private CategoryStorage categoryStorage;
     private PostStorage postStorage;
     private HashtagStorage hashtagStorage;

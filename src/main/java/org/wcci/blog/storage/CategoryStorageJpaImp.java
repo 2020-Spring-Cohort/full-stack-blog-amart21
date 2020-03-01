@@ -1,7 +1,7 @@
-package storage;
+package org.wcci.blog.storage;
 
 
-import storage.repositories.CategoryRepository;
+import org.wcci.blog.storage.repositories.CategoryRepository;
 import org.wcci.blog.models.Category;
 import org.springframework.stereotype.Service;
 

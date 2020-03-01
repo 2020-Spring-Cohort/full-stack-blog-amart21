@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.wcci.blog.controllers.PostController;
 import org.wcci.blog.models.Hashtag;
 import org.wcci.blog.models.Post;
-import storage.PostStorage;
-import storage.repositories.HashtagRepository;
+import org.wcci.blog.storage.PostStorage;
+import org.wcci.blog.storage.repositories.HashtagRepository;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
