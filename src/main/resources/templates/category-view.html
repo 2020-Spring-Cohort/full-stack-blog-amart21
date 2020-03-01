@@ -15,35 +15,41 @@
 <body class="container">
 <header class="container__header">
     <div class="header__page-title">
-        <h1>Blogging about blogs...a blogger's blog</h1>
-        <p>A collection of blogs</p>
-    </div>
-    <div class="header__search">
-        <i class="fas fa-search"></i><input type="text" placeholder="search">
+        <div class="header__page-title">
+            <p class="site-header-title">A blogger's blog about blogs</p>
+            <p>A collection of blogs</p>
     </div>
     <nav class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li> <a href="../hashtags">Search</a></li>
+            <li> <a href="../hashtags">Hashtags</a></li>
             <li><a href="../categories">Categories</a></li>
         </ul>
     </nav>
 </header>
-</body><main class="container__main">
-    <h2 th:text="${category.type}"></h2>
-    <ul >
-        <li th:each="post:${category.posts}">
-            <a th:text="${post.title}" th:href="@{'/post/' + ${post.id}}"> </a>  </li>
+<main class="container__main">
+    <div class="col-left">
+        <h2 th:text="${category.type}"></h2>
+        <ul>
+            <li th:each="post:${category.posts}">
+                <a th:text="${post.title}" th:href="@{'/post/' + ${post.id}}" class="post-link"> </a> </li>
 
 
-    </ul>
+        </ul>
+    </div>
+    <div class="col-right">
+        <form th:action="@{${categoryType} +'/add-post'}" method="POST">
 
-    <form th:action="@{${categoryType} +'/add-post'}" method="POST">
-        <input name="category" type="text">
-        <input name="postTitle" type="text">
-        <input name="postBody" type="text">
-        <button type="submit"> Add Comment</button>
-    </form>
+            <input name="category" type="text" th:value="${categoryType}">
+            <input name="postTitle" type="text" placeholder="Post Title">
+            <textarea name="postBody" id="postBodyTextArea" cols="30" rows="10"
+                      placeholder="Post Text"></textarea>
+            <button type="submit"> Add Post</button>
+        </form>
+    </div>
 
 </main>
+</body>
+
+
 </html>

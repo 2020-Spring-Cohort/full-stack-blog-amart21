@@ -18,8 +18,8 @@
   
   .container__images{
     grid-row: 2;
-    grid-column:1/7;
-    align-items: center;
+    grid-column:3/7;
+    justify-content: center;
     
   }
   
@@ -63,3 +63,4 @@
   .header__search input{
     width: 90%;
   }
+  

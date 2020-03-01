@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/layout.css">
     <script src="https://kit.fontawesome.com/94e0f58538.js" crossorigin="anonymous"></script>
-
     <title>GameSystem</title>
 </head>
 
@@ -16,53 +15,54 @@
 
 <header class="container__header">
     <div class="header__page-title">
-        <h1>Blogging about blogs...a blogger's blog</h1>
+        <p class="site-header-title">Blogging about blogs...a blogger's blog</p>
         <p>A collection of blogs</p>
-    </div>
-    <div class="header__search">
-        <i class="fas fa-search"></i><input type="text" placeholder="search">
     </div>
     <nav class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
-            <li> <a href="../hashtags">Search</a></li>
+            <li> <a href="../hashtags">Hashtags</a></li>
             <li><a href="../categories">Categories</a></li>
         </ul>
     </nav>
 </header>
 <main class="container__main">
-    <h2 th:text="'Collection of '+${post.category.type} +' Posts'"class="main__header"> blogs</h2>
-    <section class="main__post post">
+    <h2 th:text="'A collection '+${post.category.type} +' Posts'" class="main__header"> Posts
+    </h2>
 
+    <section class="main__post post content-col-left">
         <div class="main__title">
-            <h3 th:text="${post.title}">this is fantastic</h3>
+            <h3 th:text="${post.title}">Dynamite pizza </h3>
         </div>
         <div class="post__category">
-            <h3 th:text="${post.category.type}">pizza</h3>
+            <h3 th:text="${post.category.type}">Pizza</h3>
         </div>
         <div class="post__body" th:text="${post.postBody}">
-            <p>Billy Bob's Country pizza kitchen is one of the best pizza joints in town. They have all types
-                of pizzas for everyone. However, their best is the Costa Rican Cutter: three cheeses, pinapple, .</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+                vitae quo illo minus libero tenetur, laudantium fuga suscipit. Asperiores
+                 adipisci illo similique, possimus neque nostrum voluptatem repellendus 
+                 ullam fugiat iure..</p>
         </div>
-        <div class="post__hashtags" >
-            <small th:each="hashtag:${post.hashtags}" th:text="'#'+${hashtag.hashtag}">
-                #fantastic
+        <div class="post__hashtags">
+            <small th:each="hashtag:${post.hashtags}" class="hashtag">
+                <a th:href="@{'/hashtags/' + ${hashtag.id}}" th:text="'#'+${hashtag.hashtag} + ' '"></a>
             </small>
         </div>
-
     </section>
-    <section>
-        <p th:each="comment : ${post.comments}" th:text="${comment.comment}">
-
+    <section class="comment-section">
+        <p th:each="comment : ${post.comments}" th:text="${comment.comment}" class="comment">
         </p>
-    <form th:action="${post.id}+'/add-comment'" method="POST">
-        <input name="comment" type="text">
-        <button type="submit"> Add Comment</button>
-    </form>
-    <form th:action="'/post/' + ${post.id} + '/add-hashtag'" method="POST">
-        <input name = "hashtagName" type="text">
-        <button type="submit">Add Hashtag</button>
-    </form>
+    </section>
+    <div class="content-col-right row-1">
+        <form th:action="${post.id}+'/add-comment'" method="POST">
+            <input name="comment" type="text">
+            <button type="submit"> Add Comment</button>
+        </form>
+        <form th:action="'/post/' + ${post.id} + '/add-hashtag'" method="POST">
+            <input name="hashtagName" type="text">
+            <button type="submit">Add Hashtag</button>
+        </form>
+    </div>
 </main>
 
 </body>

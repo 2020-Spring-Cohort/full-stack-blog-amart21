@@ -32,8 +32,10 @@
 
 <main class="container__main">
     <h1>Hashtags</h1>
-    <h2 th:each="hashtag:${hashtags}">
-        <a th:href="@{'/hashtags/' + ${hashtag.id}}" th:text="${hashtag.hashtag}">Pizza</a></h2>
+    <div class="content-col-right">
+    <small th:each="hashtag:${hashtags}" class="hashtag">
+        <a th:href="@{'/hashtags/' + ${hashtag.id}}" th:text="'#' + ${hashtag.hashtag} + ' '"></a></small>
+    </div>
 </main>
 
 
